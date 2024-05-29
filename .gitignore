@@ -1,0 +1,24 @@
+# Local environment file
+/.env
+/src/.env
+
+# Dependencies
+/node_modules/
+
+# Ignore everything in the embeddings directory
+/src/embeddings/*
+
+# But keep the directory itself by not ignoring .gitkeep files
+!/src/embeddings/.gitkeep
+
+# Uploads directory
+/src/uploads/*
+
+# But keep the directory itself by not ignoring .gitkeep files
+!/src/uploads/.gitkeep
+
+# Logs
+/logs
+*.log
+npm-debug.log*
+/src/server.log
