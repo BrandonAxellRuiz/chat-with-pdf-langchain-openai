@@ -1,0 +1,14 @@
+Genera una representación en texto plano de un contrato con los siguientes detalles en formato clave-valor:
+- Fecha de firma del contrato: [Fecha en que se firmó el contrato]
+- Fecha de inicio de vigencia del contrato: [Fecha de inicio de la vigencia del contrato]
+- Fecha de fin de vigencia del contrato: [Fecha de fin de la vigencia del contrato]
+- Comentarios sobre la vigencia: [Comentario sobre la duración del contrato]
+- Detalles de los períodos de renta:
+  - Período de inicio: [Número del día de inicio del período]
+  - Período de fin: [Número del día de fin del período]
+  - Medida: [Medida del espacio arrendado]
+  - Unidad de medida: [Unidad de medida del espacio]
+  - Renta mensual: [Cantidad de renta mensual]
+  - Moneda: [Tipo de moneda de la renta mensual]
+  - Comentarios: [Comentarios adicionales sobre la renta mensual]
+Por favor, asegúrate de que cada detalle esté presentado como clave: valor, sin usar estructura JSON y utilizando las fechas en el formato YYYY-MM-DD.

@@ -1,5 +1,7 @@
 import { OpenAIEmbeddings } from "@langchain/openai";
-import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
+// import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
+// import { TextLoader } from "langchain/document_loaders/fs/text";
+import { DocxLoader } from "@langchain/community/document_loaders/fs/docx";
 import { FaissStore } from "@langchain/community/vectorstores/faiss";
 import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
 import { config } from "../config/config.js";
@@ -23,7 +25,8 @@ export const ingestDocuments = async (files) => {
         throw new Error(`File not found at ${filePath}`);
       }
 
-      const loader = new PDFLoader(filePath);
+      // const loader = new PDFLoader(filePath);
+      const loader = new DocxLoader(filePath);
       const docs = await loader.load();
       logger.info(`Documents loaded from ${file.originalname}`);
 

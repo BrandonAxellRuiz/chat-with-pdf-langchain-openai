@@ -14,7 +14,8 @@ import { config } from "../config/config.js";
  * loaded vector store using the provided question.
  */
 export async function getAnswer(doc, question) {
-  const llmA = new OpenAI({ modelName: "gpt-4-turbo" });
+  // gpt-3.5-turbo o gpt-4-turbo o gpt-4o
+  const llmA = new OpenAI({ modelName: "gpt-3.5-turbo" });
   const chainA = loadQAStuffChain(llmA);
   const loadedVectorStore = await FaissStore.load(
     `${config.dir}/${doc}`,

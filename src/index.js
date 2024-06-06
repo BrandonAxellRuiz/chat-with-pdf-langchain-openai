@@ -22,10 +22,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Register API routers
-app.use("/api/health", healthRouter);
-app.use("/api/ask", askRouter);
-app.use("/api/upload", uploadRouter);
-app.use("/api/list-embeddings", listEmbeddingRouter);
+app.use("/api", healthRouter);
+app.use("/api", askRouter);
+app.use("/api", uploadRouter);
+app.use("/api", listEmbeddingRouter);
 
 // Create HTTP server and listen on configured port
 http.createServer(app).listen(port, () => {
